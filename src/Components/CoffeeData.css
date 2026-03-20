@@ -1,0 +1,166 @@
+/* src/pages/CoffeeInfo/CoffeeInfo.css */
+
+/* --- Main Container --- */
+.coffee-detail-container {
+    padding: 120px 20px 60px; /* Top padding clears the fixed Navbar */
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* --- Header Section --- */
+.coffee-header h1 {
+    font-size: 4rem;
+    color: #2e1a12; /* Dark Espresso */
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+/* --- Badges (Origin, Year, Popular In) --- */
+.quick-facts {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.badge {
+    background-color: #f3e5ab; /* Latte Foam color */
+    color: #2e1a12;
+    padding: 10px 20px;
+    border-radius: 50px; /* Pill shape */
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* --- Divider Line --- */
+.divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #d2691e, transparent);
+    margin: 40px 0;
+    opacity: 0.5;
+}
+
+/* --- History Section --- */
+.history-section {
+    background-color: #fff8f0; /* Very light cream background */
+    padding: 40px;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    text-align: left;
+    border-left: 8px solid #d2691e; /* Bronze accent bar */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.history-section h2 {
+    color: #2e1a12;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.history-section p {
+    line-height: 1.8;
+    color: #4a4a4a;
+    font-size: 1.15rem;
+}
+
+/* --- Ingredients & Steps Grid --- */
+.details-grid {
+    display: flex;
+    gap: 30px;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.box {
+    flex: 1; /* Both boxes take equal width */
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08); /* Soft floating shadow */
+    border: 1px solid #eee;
+}
+
+.box h3 {
+    color: #d2691e;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+/* List Styling */
+.box ul, .box ol {
+    padding-left: 20px;
+}
+
+.box li {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.ingredients-box li::marker {
+    color: #d2691e; /* Colored bullet points */
+}
+
+/* --- Back Button --- */
+.back-btn-container {
+    margin-top: 50px;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #2e1a12;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(46, 26, 18, 0.4);
+}
+
+.back-btn:hover {
+    background-color: #d2691e;
+    transform: translateY(-5px); /* Moves up slightly on hover */
+    box-shadow: 0 8px 20px rgba(210, 105, 30, 0.4);
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .coffee-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .details-grid {
+        flex-direction: column; /* Stack ingredients on top of steps */
+    }
+
+    .history-section {
+        padding: 25px;
+    }
+}
+
+/* --- Simple Fade In Animation --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

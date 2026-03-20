@@ -1,0 +1,74 @@
+.suggestions{
+    width: 100vw;
+    height:auto ;
+    padding: 50px 5%;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #fffaf0;
+    z-index: 100;
+
+}
+.suggestions h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 40px;
+    color: #4B3621;
+}
+.coffee-images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.image{
+    width: 280px;
+    height: 350px;
+    background: white; /* distinct card background */
+    border-radius: 15px;
+    padding: 15px; /* Space inside the card */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Soft shadow */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.image img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+}
+.image img:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 25px rgba(0,0,0, 0.3);
+}
+
+.image p{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    margin-top: 15px;
+    color: #a21b1b;
+    margin: 15px;
+}
+
+@media (max-width: 768px){
+    .coffee-images{
+        flex-direction: row;
+        gap: 15px;
+    }
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+

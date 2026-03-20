@@ -1,0 +1,109 @@
+
+.app-container.dark {
+    background-color: hsl(0, 0%, 40%); 
+    color: #f0f0f0;
+    min-height: 100vh;
+}
+
+
+.dark .navbar, 
+.dark .sidebar {
+    background-color: hsl(17, 44%, 27%); 
+    color: white;
+}
+.dark .sidebar .side-link:hover {
+    color: hsl(47, 88%, 53%);
+}
+
+
+.dark .coffee-card, 
+.dark .image,       /* The "Wake Up World" cards */
+   /* History cards */
+.dark .box {        /* Ingredients/Steps boxes */
+    background-color: #2e1a12; /* Dark card background */
+    color: #f3e5ab; /* Latte text color */
+    border: 1px solid #4a3b32;
+}
+
+/* 3. Text Colors inside Cards */
+.dark .coffee-card p,
+.dark .image p,
+
+.dark .box li {
+    color: #ddd; /* Light grey for readability */
+}
+
+.dark h1, .dark h2, .dark h3 {
+    color: #f3e5ab; /* Latte Gold for headings */
+}
+
+/* 4. Inputs & Search Bar */
+.dark .search-box {
+    background-color: #3d2b24;
+    border: 1px solid #555;
+}
+.dark .search-box input {
+    background-color: transparent;
+    color: white;
+}
+
+/* 5. Coffee Info Page Specifics */
+.dark .history-section {
+    background-color: #2e1a12; /* Dark background */
+    border-left: 5px solid #f3e5ab; /* Light accent bar */
+}
+.dark .badge {
+    background-color: #4a3b32;
+    color: #fff;
+}
+.dark .info{
+    background-color: hsl(0, 0%, 40%);
+}
+.dark .history{
+    background-color: #4a3b32;
+}
+.dark .bean-variety{
+    background-color: #4a3b32;
+}
+.dark .suggestions{
+    background-color: hsl(0, 0%, 10%);
+}
+.dark .suggestions h1{
+    color: white;
+}
+.dark .container{
+    background-color: black
+}
+
+.dark .tagline{
+    color: white;
+}
+
+.dark .coffee-detail-container{
+    background-color: hsl(0, 0%, 25%);
+
+}
+.dark .coffee-header h1{
+    color: hsl(37, 26%, 49%);
+}
+.dark .history-section p{
+    color: white;
+
+
+}
+.dark .history-section h2{
+    color: #f3e5ab;
+}
+.dark .hero-content h1{
+    color: white;
+    text-shadow: 
+        2px 2px 0px black, 
+        -1px -1px 0px,  
+        1px -1px 0px ,
+        -1px 1px 0px #ffffff,
+        1px 1px 0px #ffffff;
+
+}
+.dark .search-box ::placeholder{
+    color: white;
+}

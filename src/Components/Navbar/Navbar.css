@@ -1,0 +1,36 @@
+.navbar{
+    height: 80px;
+    display: flex;
+    width: 100%;
+    
+    background-color: hsl(35, 94%, 88%);
+    justify-content: space-between;
+    align-items: center;
+   position: sticky;
+   top: 0;
+
+   z-index: 100;
+}
+.leftside{
+    display: flex;
+    gap: 45px;
+    align-items: center;
+    padding-left: 20px; 
+
+}
+.logo img{
+    border-radius: 50px;
+    border: 4px black;
+    width: auto;
+    height: 60px;
+}
+.leftside p{
+    font-weight: bold;
+    font-size: 30px;
+    
+}
+
+.rightside{
+    margin-left: 30px;
+    
+}

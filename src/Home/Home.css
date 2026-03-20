@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.home{
+    position: relative;
+    width: fit-content;
+    height: auto;
+}
+.background-img{
+    width: 100%;
+    height: 120vh;
+    object-fit: cover;
+    
+    mask-image: linear-gradient(to right, transparent, white 20%);
+    -webkit-mask-image: linear-gradient(to right, transparent, white 20%);
+
+    filter: brightness(0.9);
+}
+.hero-content {
+    
+    position: absolute; 
+    
+    
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    
+    
+    z-index: 10; /* Puts it on top of the image (layer 10) */
+    width: 80%; /* Prevents it from touching the edges */
+    text-align: center; /* Centers text and search bar */
+    color: hsl(162, 48%, 15%); /* Ensures text is readable on dark bg */
+    text-shadow: 
+        2px 2px 0px #ffffff, 
+        -1px -1px 0px #ffffff,  
+        1px -1px 0px #ffffff,
+        -1px 1px 0px #ffffff,
+        1px 1px 0px #ffffff;
+
+}
+.hero-content h1{
+    font-size: 4.5rem;
+}
+.hero-content p{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.search-box{
+    display: flex;
+    align-items: center;
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    margin: 30px auto;
+    margin: 30px auto;
+    border-radius: 50px;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+}
+.search-box input {
+    flex: 1;
+    border: none; 
+    outline: none; 
+    font-size: 16px;
+    padding-left: 10px;
+    font-family: inherit; 
+}
+.search-box button {
+    background: #d2691e; /* Coffee color */
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 30px; /* Rounded button inside the bar */
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.search-box button:hover {
+    background: #a0522d; /* Darker coffee color on hover */
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin: 40px 20px;
+}
+.history{
+    background: hsl(25, 100%, 92%);
+    border-radius: 10px;
+    padding: 25px;
+    flex: 1;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+.history h2{
+    text-align: center;
+}
+.history p{
+    font-size: 1.1rem;
+}
+.bean-variety p{
+    font-size: 1.1rem;
+}
+.bean-variety h2{
+    text-align: center;
+}
+.history:hover{
+    transform: translateY(-5px);
+}
+.bean-variety{
+    background: hsl(25, 100%, 92%);;
+    border-radius: 10px;
+    padding: 25px;
+    flex: 1;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+.bean-variety:hover{
+    transform: translateY(-5px);
+}

@@ -1,0 +1,177 @@
+/* GLOBAL RESET: Removes default spacing that breaks layouts */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* MAIN CONTAINER: Forces the Side-by-Side Split */
+.login {
+    display: flex;        /* This creates the row layout (Left | Right) */
+    height: 100vh;        /* Forces full screen height */
+    width: 100%;
+    overflow: hidden;     /* Prevents scrollbars */
+    font-family: 'Segoe UI', sans-serif;
+    position: relative;   /* Needed for the footer positioning */
+}
+
+/* --- LEFT SIDE (Image Section) --- */
+.left {
+    flex: 1;              /* Takes up exactly 50% of width */
+    position: relative;   /* Allows text overlay to sit on top */
+    background-color: #2e1a12; /* Fallback color */
+}
+
+.left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* Crucial: Makes image fill area without stretching */
+    display: block;       /* Removes tiny gap under image */
+    opacity: 0.9;
+}
+
+.login-overlay {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers text perfectly */
+    text-align: center;
+    color: white;
+    width: 80%;
+    z-index: 10;
+}
+
+.login-overlay h1 {
+    font-size: 5rem;
+    font-family: serif;
+    margin-bottom: 10px;
+     text-shadow: 
+        2px 2px 0px ,
+        -1px -1px 0px black,  
+        1px -1px 0px black,
+        -1px 1px 0px white,
+        1px 1px 0px white;
+}
+.login-overlay p{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.right {
+    flex: 1;             
+    background-color: #fff8f0; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;     
+    padding: 40px;
+    position: relative;
+}
+
+
+/* LOGO INSIDE THE RIGHT SIDE */
+.right .login-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    background: transparent; /* Fixes the "beige" background issue */
+}
+
+.right .login-logo img {
+    width: 70px;
+    height: auto;
+}
+
+.right .login-logo h1 {
+    font-size: 2.3rem;
+    color: #ab4017;
+    font-family: serif;
+}
+
+
+.login-form {
+    margin-top: 50px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+}
+
+.login-form h1 {
+    margin-bottom: 20px;
+    color: #2e1a12;
+    font-family: serif;
+}
+
+/* INPUT FIELDS */
+.login-form input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: white;
+    border: 1px solid #dcc0b0;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.login-form input:focus {
+    border-color: #d2691e;
+    box-shadow: 0 0 0 3px rgba(210, 105, 30, 0.1);
+}
+
+/* BUTTONS */
+.login-form button {
+    width: 100%;
+    padding: 15px;
+    background: #d2691e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* HELP LINKS */
+.form-help {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #666;
+    cursor: pointer;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.remember input {
+    width: auto; /* Fixes the giant checkbox */
+    margin: 0;
+}
+
+/* TOGGLE TEXT */
+.form-switch {
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.form-switch span {
+    color: #d2691e;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+/* --- FOOTER FIX --- */
+/* We position this absolute bottom-right inside the RIGHT panel */
